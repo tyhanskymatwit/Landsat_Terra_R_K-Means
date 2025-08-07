@@ -33,7 +33,7 @@ palette <- brewer.pal(k, "Set1")
 plot(classified, col = palette, main = "Unsupervised Classification (K-Means)")
 
 # Save classified raster
-writeRaster(classified, "classified_balkan_flooding.tif", overwrite=TRUE)
+writeRaster(classified, "boston_bay_Landsat1-5.tif", overwrite=TRUE)
 
 # Suppose cluster 2 represents Land
 levels(classified) <- data.frame(id = 1:5,
@@ -48,4 +48,5 @@ area_per_class <- data.frame(
   area_sqm = freq_table$count * pixel_area
 )
 print(area_per_class)
+
 writeRaster(classified, "boston_bay_final.tif", overwrite = TRUE)
