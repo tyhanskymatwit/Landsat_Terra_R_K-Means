@@ -12,7 +12,7 @@ names(image) <- paste0("Band_", 1:nlyr(image))  # rename for clarity
 
 # Plot as RGB and adjust bands as necessary
 plotRGB(image, r = 3, g = 2, b = 1, stretch="lin", axes = TRUE,
-        main = "Balkan Flooding - RGB Composite")
+        main = "Massachusetts Bay - RGB Composite")
 
 # Convert raster values to matrix for clustering
 vals <- values(image)
@@ -50,4 +50,5 @@ area_per_class <- data.frame(
 print(area_per_class)
 
 writeRaster(classified, "boston_bay_final.tif", overwrite = TRUE)
+
 
