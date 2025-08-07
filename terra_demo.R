@@ -35,7 +35,7 @@ plot(classified, col = palette, main = "Unsupervised Classification (K-Means)")
 # Save classified raster
 writeRaster(classified, "boston_bay_Landsat1-5.tif", overwrite=TRUE)
 
-# Suppose cluster 2 represents Land
+# Providing labels to the supposed regions identified
 levels(classified) <- data.frame(id = 1:5,
                                  class = c("Water", "Land", "Heavy Clouds", "Light Clouds", "N/A"))
 plot(classified, col = palette, main = "Classified Map with Labels", axes = TRUE, legend = TRUE)
@@ -50,3 +50,4 @@ area_per_class <- data.frame(
 print(area_per_class)
 
 writeRaster(classified, "boston_bay_final.tif", overwrite = TRUE)
+
