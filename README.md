@@ -2,6 +2,7 @@
 ### NOTICE: The following work is the original creation of Marko Tyhansky and is not permitted for use without consent of original author.
 #### An R project focusing on using the Terra package to analyze a Landsat image of the Massachusetts bay area and using K-means clustering to classify the area.
 This project was a side project of mine over the summer where I employed machine learning concepts (k-means clustering) to analize a topographical image of the Mass. bay area using the Terra R Package. Here are some concepts I learned or practiced in this project:
+Note: Results were converted from .tif files
 
 ## 1. Spatial Data Handling
 Loaded and manipulated a multi-band geospatial raster file using the terra package. Required an understanding of raster structure, coordinate systems, band information, and resolution.
